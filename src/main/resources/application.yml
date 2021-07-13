@@ -14,9 +14,9 @@ spring:
       
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: 
-    username: 
-    password: 
+    url: jdbc:mariadb://cheol-db.ckspsubksrqo.ap-northeast-2.rds.amazonaws.com:3306/cheolgram?serverTimezone=Asia/Seoul
+    username: ogum0405
+    password: wnscjf802
     
   jpa:
     open-in-view: true
@@ -29,7 +29,7 @@ spring:
   servlet:
     multipart:
       enabled: true
-      max-file-size: 5MB
+      max-file-size: 50MB
 
   security:
     user:
