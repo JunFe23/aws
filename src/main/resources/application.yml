@@ -1,0 +1,51 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://cheol-db.ckspsubksrqo.ap-northeast-2.rds.amazonaws.com:3306/cheolgram?serverTimezone=Asia/Seoul
+    username: ogum0405
+    password: wnscjf802
+    
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update # create, update, none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+      
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+
+  security:
+    user:
+      name: test
+      password: 1234   
+
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 400324157961075
+            client-secret: e0b6fc7ffc6d66222c5d14f08ca44e93
+            scope:
+            - public_profile
+            - email
+          
+
+file:
+  path: /home/ec2-user/app/step1/upload/

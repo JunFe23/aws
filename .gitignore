@@ -33,5 +33,5 @@ build/
 .vscode/
 /.metadata/
 
-### my ignore ###
-src/main/resources/application.yml
+# ### my ignore ###
+# src/main/resources/application.yml
