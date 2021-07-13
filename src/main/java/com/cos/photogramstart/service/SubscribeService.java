@@ -30,7 +30,7 @@ public class SubscribeService {
 		sb.append("SELECT u.id, u.username, u.profileImageUrl, ");
 		sb.append("if((SELECT 1 FROM subscribe WHERE fromUserId = ? AND toUserId = u.id), 1, 0) subscribeState, ");
 		sb.append("if((?=u.id), 1, 0) equalUserState ");
-		sb.append("FROM user u INNER JOIN subscribe s ");
+		sb.append("FROM User u INNER JOIN subscribe s ");
 		sb.append("ON u.id = s.toUserId ");
 		sb.append("WHERE s.fromUserid = ?"); // 세미콜론 첨부하면 안됨. 마지막 줄 빼고 한칸씩 띄어씀.
 		
